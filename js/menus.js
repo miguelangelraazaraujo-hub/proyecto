@@ -1,56 +1,56 @@
 document.addEventListener("DOMContentLoaded", () => {
   // --- Toggle main menu ---
-  const menuButton = document.querySelector(".navbar-mobile-toggle");
-  const mobileMenu = document.querySelector('[data-click-menu-id="mobile-menu"]');
+  const Menu_Button = document.querySelector(".navbar-mobile-toggle");
+  const Mobile_Menu = document.querySelector('[data-click-menu-id="mobile-menu"]');
 
-  menuButton.addEventListener("click", (e) => {
+  Menu_Button.addEventListener("click", (e) => {
     e.preventDefault();
-    mobileMenu.classList.toggle("visible");
+    Mobile_Menu.classList.toggle("visible");
   });
 
   // --- Toggle submenus ---
-  const submenuButtons = document.querySelectorAll(".navbar-mobile-item-main");
+  const Submenu_Buttons = document.querySelectorAll(".navbar-mobile-item-main");
 
-  submenuButtons.forEach(btn => {
+  Submenu_Buttons.forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.preventDefault(); // prevent navigation if the element is an <a> tag
 
-      const menuId = btn.dataset.clickMenuTarget;
-      const submenu = document.querySelector(`[data-click-menu-id="${menuId}"]`);
-      if (!submenu) return;
+      const Menu_Id = btn.dataset.clickMenuTarget;
+      const Submenu = document.querySelector(`[data-click-menu-id="${Menu_Id}"]`);
+      if (!Submenu) return;
 
       // --- Close other open submenus ---
       document.querySelectorAll('.navbar-mobile-item-submenu.visible').forEach(openMenu => {
-        if (openMenu !== submenu) {
+        if (openMenu !== Submenu) {
           openMenu.classList.remove("visible");
 
           // Find the button that controls this submenu
-          const parentButton = document.querySelector(
+          const Parent_Button = document.querySelector(
             `.navbar-mobile-item-main[data-click-menu-target="${openMenu.dataset.clickMenuId}"]`
           );
 
-          if (parentButton) {
-            const iconClosed = parentButton.querySelector(".navbar-mobile-item-icon-closed");
-            const iconOpened = parentButton.querySelector(".navbar-mobile-item-icon-opened");
+          if (Parent_Button) {
+            const Icon_Closed = Parent_Button.querySelector(".navbar-mobile-item-icon-closed");
+            const Icon_Opened = Parent_Button.querySelector(".navbar-mobile-item-icon-opened");
 
-            if (iconClosed && iconOpened) {
-              iconClosed.classList.remove("hidden");
-              iconOpened.classList.remove("visible");
+            if (Icon_Closed && Icon_Opened) {
+              Icon_Closed.classList.remove("hidden");
+              Icon_Opened.classList.remove("visible");
             }
           }
         }
       });
 
       // --- Toggle visibility of the current submenu ---
-      submenu.classList.toggle("visible");
+      Submenu.classList.toggle("visible");
 
       // --- Toggle icons of the current button ---
-      const iconClosed = btn.querySelector(".navbar-mobile-item-icon-closed");
-      const iconOpened = btn.querySelector(".navbar-mobile-item-icon-opened");
+      const Icon_Closed = btn.querySelector(".navbar-mobile-item-icon-closed");
+      const Icon_Opened = btn.querySelector(".navbar-mobile-item-icon-opened");
 
-      if (iconClosed && iconOpened) {
-        iconClosed.classList.toggle("hidden");
-        iconOpened.classList.toggle("visible");
+      if (Icon_Closed && Icon_Opened) {
+        Icon_Closed.classList.toggle("hidden");
+        Icon_Opened.classList.toggle("visible");
       }
     });
   });
