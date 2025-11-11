@@ -21,350 +21,430 @@
 </head>
 
 <body>
-  <div class="main-layout">
-    <div class="main-container-item-middle">
-      <nav class="ani-page">
-        <!-- Mobile Navigation-->
-        <div class="visible-xs no-print js-header-main">
-          <div class="navbar-mobile" role="navigation">
-            <div class="navbar-mobile-header-section">
 
-              <a class="navbar-mobile-logo" href="index.html"></a>
-              <span class="navbar-mobile-panel">panel</span>
+  <div class="main-container-item-middle">
+    <nav class="ani-page">
+      <!-- Mobile Navigation-->
+      <div class="visible-xs no-print js-header-main">
+        <div class="navbar-mobile" role="navigation">
+          <div class="navbar-mobile-header-section">
 
-            </div>
+            <a class="navbar-mobile-logo" href="index.html"></a>
+            <span class="navbar-mobile-panel">panel</span>
 
-            <div class="navbar-mobile-header-section-buttoms">
+          </div>
 
-              <button type="button" class="navbar-mobile-toggle js-click-menu" data-click-menu-target="mobile-menu">
-                <span class="navbar-mobile-toggle-icon-closed">
-                  <i class="fa-solid fa-chevron-down"></i>
+          <div class="navbar-mobile-header-section-buttoms">
+
+            <button type="button" class="navbar-mobile-toggle js-click-menu" data-click-menu-target="mobile-menu">
+              <span class="navbar-mobile-toggle-icon-closed">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+              <span class="navbar-mobile-toggle-icon-opened">
+                <i class="fa-solid fa-chevron-up"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-menu js-click-menu" data-click-menu-id="mobile-menu" data-visibility="hidden">
+
+          <div class="mobile-menu-content">
+            <div class="mobile-menu-tab">
+
+              <button class="mobile-menu-tab mobile-menu-tab-user js-user-link">
+                <span class="mobile-menu-tab-avatar">
+                  <span class="avatar avatar-full-rounded avatar-guest"></span>
                 </span>
-                <span class="navbar-mobile-toggle-icon-opened">
-                  <i class="fa-solid fa-chevron-up"></i>
+
+                <span class="login">
+                  iniciar sesión / registrarme
                 </span>
               </button>
+
             </div>
-          </div>
 
-          <div class="mobile-menu js-click-menu" data-click-menu-id="mobile-menu" data-visibility="hidden">
+            <div class="mobile-menu-item js-click-menu js-click-menu-active" data-click-menu-id="mobile-nav"
+              data-visibility="visible">
 
-            <div class="mobile-menu-content">
-              <div class="mobile-menu-tab">
-
-                <button class="mobile-menu-tab mobile-menu-tab-user js-user-link">
-                  <span class="mobile-menu-tab-avatar">
-                    <span class="avatar avatar-full-rounded avatar-guest"></span>
+              <div class="navbar-mobile-item">
+                <a data-click-menu-target="nav-mobile-home" class="navbar-mobile-item-main js-click-menu"
+                  href="index.html">
+                  <span class="navbar-mobile-item-icon navbar-mobile-item-icon-closed">
+                    <i class="fas fa-chevron-right"></i>
                   </span>
 
-                  <span class="login">
-                    iniciar sesión / registrarme
+                  <span class="navbar-mobile-item-icon navbar-mobile-item-icon-opened">
+                    <i class="fas fa-chevron-down"></i>
                   </span>
+
+                  inicio
+                </a>
+
+                <ul class="navbar-mobile-item-submenu js-click-menu" data-click-menu-id="nav-mobile-home"
+                  data-visibility="hidden">
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/news.html">
+                      novedades
+                    </a>
+                  </li>
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/beat_team.html">
+                      equipo
+                    </a>
+                  </li>
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="search.html">
+                      búsqueda
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="navbar-mobile-item">
+                <a data-click-menu-target="nav-mobile-tracks" class="navbar-mobile-item-main js-click-menu"
+                  href="hierarchy/tracks.html">
+                  <span class="navbar-mobile-item-icon navbar-mobile-item-icon-closed">
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+
+                  <span class="navbar-mobile-item-icon navbar-mobile-item-icon-opened">
+                    <i class="fas fa-chevron-down"></i>
+                  </span>
+
+                  tracks
+                </a>
+
+                <ul class="navbar-mobile-item-submenu js-click-menu" data-click-menu-id="nav-mobile-tracks"
+                  data-visibility="hidden">
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/tracks.html">
+                      lista de pistas
+                    </a>
+                  </li>
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/artists.html">
+                      artistas
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="navbar-mobile-item">
+                <a data-click-menu-target="nav-mobile-community" class="navbar-mobile-item-main js-click-menu"
+                  href="hierarchy/community.html">
+                  <span class="navbar-mobile-item-icon navbar-mobile-item-icon-closed">
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+
+                  <span class="navbar-mobile-item-icon navbar-mobile-item-icon-opened">
+                    <i class="fas fa-chevron-down"></i>
+                  </span>
+
+                  comunidad
+                </a>
+                <ul class="navbar-mobile-item-submenu js-click-menu" data-click-menu-id="nav-mobile-community"
+                  data-visibility="hidden">
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/forums.html">
+                      foro
+                    </a>
+                  </li>
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/fanarts.html">
+                      fanarts
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="navbar-mobile-item">
+                <a data-click-menu-target="nav-mobile-help"
+                  class="navbar-mobile-item-main js-click-menu js-click-menu-active" href="hierarchy/help-centre.html">
+                  <span class="navbar-mobile-item-icon navbar-mobile-item-icon-closed">
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+
+                  <span class="navbar-mobile-item-icon navbar-mobile-item-icon-opened">
+                    <i class="fas fa-chevron-down"></i>
+                  </span>
+
+                  ayuda
+                </a>
+                <ul class="navbar-mobile-item-submenu js-click-menu js-click-menu-active"
+                  data-click-menu-id="nav-mobile-help" data-visibility="visible">
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/faq.html">
+                      preguntas frecuentes
+                    </a>
+                  </li>
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/help-form.html">
+                      formulario de ayuda
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="navbar-mobile-item">
+
+                <button class="navbar-mobile-item-main js-click-menu" data-click-menu-target="nav-mobile-locale">
+                  <span class="navbar-mobile-item-icon navbar-mobile-item-icon-closed">
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+                  <span class="navbar-mobile-item-icon navbar-mobile-item-icon-opened">
+                    <i class="fas fa-chevron-down"></i>
+                  </span>
+                  <span class="navbar-mobile-item-locale-flag">
+                    <span class="flag-country flag-country-small flag-country-flat"
+                      style="background-image: url('assets/img/flags/1f1ea-1f1f8.svg');">
+                    </span>
+                  </span>
+                  español
                 </button>
-
-              </div>
-
-              <div class="mobile-menu-item js-click-menu js-click-menu-active" data-click-menu-id="mobile-nav"
-                data-visibility="visible">
-
-                <div class="navbar-mobile-item">
-                  <a data-click-menu-target="nav-mobile-home" class="navbar-mobile-item-main js-click-menu"
-                    href="index.html">
-                    <span class="navbar-mobile-item-icon navbar-mobile-item-icon-closed">
-                      <i class="fas fa-chevron-right"></i>
-                    </span>
-
-                    <span class="navbar-mobile-item-icon navbar-mobile-item-icon-opened">
-                      <i class="fas fa-chevron-down"></i>
-                    </span>
-
-                    inicio
-                  </a>
-
-                  <ul class="navbar-mobile-item-submenu js-click-menu" data-click-menu-id="nav-mobile-home"
-                    data-visibility="hidden">
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/news.html">
-                        novedades
-                      </a>
-                    </li>
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/beat_team.html">
-                        equipo
-                      </a>
-                    </li>
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="search.html">
-                        búsqueda
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="navbar-mobile-item">
-                  <a data-click-menu-target="nav-mobile-tracks" class="navbar-mobile-item-main js-click-menu"
-                    href="hierarchy/tracks.html">
-                    <span class="navbar-mobile-item-icon navbar-mobile-item-icon-closed">
-                      <i class="fas fa-chevron-right"></i>
-                    </span>
-
-                    <span class="navbar-mobile-item-icon navbar-mobile-item-icon-opened">
-                      <i class="fas fa-chevron-down"></i>
-                    </span>
-
-                    tracks
-                  </a>
-
-                  <ul class="navbar-mobile-item-submenu js-click-menu" data-click-menu-id="nav-mobile-tracks"
-                    data-visibility="hidden">
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/tracks.html">
-                        lista de pistas
-                      </a>
-                    </li>
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/artists.html">
-                        artistas
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="navbar-mobile-item">
-                  <a data-click-menu-target="nav-mobile-community" class="navbar-mobile-item-main js-click-menu"
-                    href="hierarchy/community.html">
-                    <span class="navbar-mobile-item-icon navbar-mobile-item-icon-closed">
-                      <i class="fas fa-chevron-right"></i>
-                    </span>
-
-                    <span class="navbar-mobile-item-icon navbar-mobile-item-icon-opened">
-                      <i class="fas fa-chevron-down"></i>
-                    </span>
-
-                    comunidad
-                  </a>
-                  <ul class="navbar-mobile-item-submenu js-click-menu" data-click-menu-id="nav-mobile-community"
-                    data-visibility="hidden">
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/forums.html">
-                        foro
-                      </a>
-                    </li>
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/fanarts.html">
-                        fanarts
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="navbar-mobile-item">
-                  <a data-click-menu-target="nav-mobile-help"
-                    class="navbar-mobile-item-main js-click-menu js-click-menu-active"
-                    href="hierarchy/help-centre.html">
-                    <span class="navbar-mobile-item-icon navbar-mobile-item-icon-closed">
-                      <i class="fas fa-chevron-right"></i>
-                    </span>
-
-                    <span class="navbar-mobile-item-icon navbar-mobile-item-icon-opened">
-                      <i class="fas fa-chevron-down"></i>
-                    </span>
-
-                    ayuda
-                  </a>
-                  <ul class="navbar-mobile-item-submenu js-click-menu js-click-menu-active"
-                    data-click-menu-id="nav-mobile-help" data-visibility="visible">
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/faq.html">
-                        preguntas frecuentes
-                      </a>
-                    </li>
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close" href="hierarchy/help-form.html">
-                        formulario de ayuda
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="navbar-mobile-item">
-
-                  <button class="navbar-mobile-item-main js-click-menu" data-click-menu-target="nav-mobile-locale">
-                    <span class="navbar-mobile-item-icon navbar-mobile-item-icon-closed">
-                      <i class="fas fa-chevron-right"></i>
-                    </span>
-                    <span class="navbar-mobile-item-icon navbar-mobile-item-icon-opened">
-                      <i class="fas fa-chevron-down"></i>
-                    </span>
-                    <span class="navbar-mobile-item-locale-flag">
-                      <span class="flag-country flag-country-small flag-country-flat"
-                        style="background-image: url('assets/img/flags/1f1ea-1f1f8.svg');">
+                <ul class="navbar-mobile-item-submenu js-click-menu js-click-menu-active"
+                  data-click-menu-id="nav-mobile-locale" data-visibility="visible">
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close"
+                      href="index.html/set-locale?locale=en" data-remote="1" data-method="POST">
+                      <span class="navbar-mobile-item-locale-flag">
+                        <span class="flag-country flag-country-small flag-country-flat"
+                          style="background-image: url('assets/img/flags/1f1ec-1f1e7.svg');"></span>
                       </span>
-                    </span>
-                    español
-                  </button>
-                  <ul class="navbar-mobile-item-submenu js-click-menu js-click-menu-active"
-                    data-click-menu-id="nav-mobile-locale" data-visibility="visible">
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close"
-                        href="index.html/set-locale?locale=en" data-remote="1" data-method="POST">
-                        <span class="navbar-mobile-item-locale-flag">
-                          <span class="flag-country flag-country-small flag-country-flat"
-                            style="background-image: url('assets/img/flags/1f1ec-1f1e7.svg');"></span>
-                        </span>
 
-                        English
-                      </a>
-                    </li>
-                    <li>
-                      <a class="navbar-mobile-item-submenu-item js-click-menu-close"
-                        href="index.html/set-locale?locale=es" data-remote="1" data-method="POST">
-                        <span class="navbar-mobile-item-locale-flag">
-                          <span class="flag-country flag-country-small flag-country-flat"
-                            style="background-image: url('assets/img/flags/1f1ea-1f1f8.svg');"></span>
-                        </span>
+                      English
+                    </a>
+                  </li>
+                  <li>
+                    <a class="navbar-mobile-item-submenu-item js-click-menu-close"
+                      href="index.html/set-locale?locale=es" data-remote="1" data-method="POST">
+                      <span class="navbar-mobile-item-locale-flag">
+                        <span class="flag-country flag-country-small flag-country-flat"
+                          style="background-image: url('assets/img/flags/1f1ea-1f1f8.svg');"></span>
+                      </span>
 
-                        Español
-                      </a>
-                    </li>
-                  </ul>
-
-                </div>
+                      Español
+                    </a>
+                  </li>
+                </ul>
 
               </div>
+
             </div>
-
           </div>
-        </div>
-        <!-- Desktop Navigation -->
-
-        <div class="landing-nav hidden-xs">
-          <!-- Coming soon -->
 
         </div>
+      </div>
+      <!-- Desktop Navigation -->
 
-      </nav>
-      <div class="nav-data" id="nav-data-landing"></div>
-      <div class="login-box"></div>
-      <div class="ani-page">
-        <div class="landing-video">
-          <div class="main-overlay"></div>
-          <div class="landing-bg-container">
-            <video class="landing-bg" autoplay loop muted playsinline
-              src="assets/fonts/mp4-20251029-031052vlog.mp4"></video>
+      <div class="landing-nav hidden-xs">
+        <!-- Coming soon -->
+
+      </div>
+
+    </nav>
+    <div class="nav-data" id="nav-data-landing"></div>
+    <div class="login-box"></div>
+    <div class="ani-page">
+      <div class="landing-video">
+        <div class="main-overlay"></div>
+        <div class="landing-bg-container">
+          <video class="landing-bg" autoplay loop muted playsinline
+            src="assets/fonts/mp4-20251029-031052vlog.mp4"></video>
+        </div>
+        <div class="landing-info">
+          <strong>x</strong>
+          usuarios registrados
+          <strong>x</strong>
+          partidas jugadas
+          <strong>x</strong>
+          días activos
+        </div>
+        <div class="landing-messages">
+          <div class="landing-message-extra-container">
+            <div class="landing-message-extra landing-message-extra-top">
+              <div class="landing-message-logo"></div>
+            </div>
           </div>
-          <div class="landing-info">
-            <strong>x</strong>
-            usuarios registrados
-            <strong>x</strong>
-            partidas jugadas
-            <strong>x</strong>
-            días activos
+          <div class="landing-message-welcome">
+            <h1 class="landing-message-welcome-main">Bienvenido a AniBeat</h1>
+            <h2 class="landing-message-welcome-sub">Tus canciones de anime favoritas en un solo lugar</h2>
           </div>
-          <div class="landing-messages">
-            <div class="landing-message-extra-container">
-              <div class="landing-message-extra landing-message-extra-top">
-                <div class="landing-message-logo"></div>
-              </div>
-            </div>
-            <div class="landing-message-welcome">
-              <h1 class="landing-message-welcome-main">Bienvenido a AniBeat</h1>
-              <h2 class="landing-message-welcome-sub">Tus canciones de anime favoritas en un solo lugar</h2>
-            </div>
-            <!--FUTURE EXPANSION-->
-            <div class="landing-message-extra-container">
-              <div class="landing-message-extra landing-message-extra-bottom"></div>
-            </div>
+          <!--FUTURE EXPANSION-->
+          <div class="landing-message-extra-container">
+            <div class="landing-message-extra landing-message-extra-bottom"></div>
           </div>
         </div>
       </div>
-      <div class="ani-page container-landing-news">
-        <div class="landing-news">
-          <div class="landing-news-posts">
+    </div>
+    <div class="ani-page container-landing-news">
+      <div class="landing-news">
+        <div class="landing-news-posts">
 
-            <a class="news-card news-card-landing news-card-hover" href="hierarchy/news.html">
-              <div class="news-card-cover-container">
-                <span class="news-card-cover"></span>
-                <div class="news-card-time">27 de oct. de 2025</div>
-              </div>
-              <div class="news-card-main">
-                <div class="news-card-row news-card-row-title">Nuevo artistas destacado: autor</div>
-                <div class="news-card-row news-card-row-preview"></div>
-                <div class="news-card-row news-card-row-author">por <strong>autor</strong></div>
-              </div>
-            </a>
+          <a class="news-card news-card-landing news-card-hover" href="hierarchy/news.html">
+            <div class="news-card-cover-container">
+              <span class="news-card-cover"></span>
+              <div class="news-card-time">27 de oct. de 2025</div>
+            </div>
+            <div class="news-card-main">
+              <div class="news-card-row news-card-row-title">Nuevo artistas destacado: autor</div>
+              <div class="news-card-row news-card-row-preview"></div>
+              <div class="news-card-row news-card-row-author">por <strong>autor</strong></div>
+            </div>
+          </a>
 
-          </div>
-          <div class="landing-news-posts">
+        </div>
+        <div class="landing-news-posts first-row">
 
-            <a class="news-card news-card-landing news-card-hover" href="hierarchy/fanarts.html">
-              <div class="news-card-cover-container">
-                <img class="news-card-cover" src="assets/img/posts/halloween-fanarts-results.jpg" alt="post2">
-                <div class="news-card-time">23 de oct. de 2025</div>
+          <a class="news-card news-card-landing news-card-hover" href="hierarchy/fanarts.html">
+            <div class="news-card-cover-container">
+              <img class="news-card-cover" src="assets/img/posts/halloween-fanarts-results.jpg" alt="post2">
+              <div class="news-card-time">23 de oct. de 2025</div>
+            </div>
+            <div class="news-card-main">
+              <div class="news-card-row news-card-row-title">Halloween 2025 Concurso de Fanart: Resultados
               </div>
-              <div class="news-card-main">
-                <div class="news-card-row news-card-row-title">Halloween 2025 Concurso de Fanart: Resultados
-                </div>
-                <div class="news-card-row news-card-row-preview"></div>
-                <div class="news-card-row news-card-row-author">por <strong>Autor</strong></div>
-              </div>
-            </a>
+              <div class="news-card-row news-card-row-preview"></div>
+              <div class="news-card-row news-card-row-author">por <strong>Autor</strong></div>
+            </div>
+          </a>
 
-            <a class="news-card news-card-landing news-card-hover" href="hierarchy/news.html">
-              <div class="news-card-cover-container">
-                <img class="news-card-cover" src="assets/img/posts/songs-added.gif" alt="post3">
-                <div class="news-card-time">20 de oct. de 2025</div>
-              </div>
-              <div class="news-card-main">
-                <div class="news-card-row news-card-row-title">Nuevas canciones añadidas: Lista</div>
-                <div class="news-card-row news-card-row-preview"></div>
-                <div class="news-card-row news-card-row-author">por <strong>autor</strong></div>
-              </div>
-            </a>
+          <a class="news-card news-card-landing news-card-hover" href="hierarchy/news.html">
+            <div class="news-card-cover-container">
+              <img class="news-card-cover" src="assets/img/posts/songs-added.gif" alt="post3">
+              <div class="news-card-time">20 de oct. de 2025</div>
+            </div>
+            <div class="news-card-main">
+              <div class="news-card-row news-card-row-title">Nuevas canciones añadidas: Lista</div>
+              <div class="news-card-row news-card-row-preview"></div>
+              <div class="news-card-row news-card-row-author">por <strong>autor</strong></div>
+            </div>
+          </a>
 
-            <a class="news-card news-card-landing news-card-hover" href="hierarchy/news.html">
-              <div class="news-card-cover-container">
-                <img class="news-card-cover" src="assets/img/posts/omori-header.jpg" alt="post4">
-                <div class="news-card-time">15 de oct. de 2025</div>
-              </div>
-              <div class="news-card-main">
-                <div class="news-card-row news-card-row-title">Halloween 2025 Concurso de Fanart: Votaciones
-                  abiertas</div>
-                <div class="news-card-row news-card-row-preview"></div>
-                <div class="news-card-row news-card-row-author">por <strong>autor</strong></div>
-              </div>
-            </a>
+          <a class="news-card news-card-landing news-card-hover" href="hierarchy/news.html">
+            <div class="news-card-cover-container">
+              <img class="news-card-cover" src="assets/img/posts/omori-header.jpg" alt="post4">
+              <div class="news-card-time">15 de oct. de 2025</div>
+            </div>
+            <div class="news-card-main">
+              <div class="news-card-row news-card-row-title">Halloween 2025 Concurso de Fanart: Votaciones
+                abiertas</div>
+              <div class="news-card-row news-card-row-preview"></div>
+              <div class="news-card-row news-card-row-author">por <strong>autor</strong></div>
+            </div>
+          </a>
 
-          </div>
-          <div class="landing-news-link">
-            <a href="hierarchy/news.html" class="show-more-link">
-              <span class="show-more-link-label">
-                <span class="show-more-link-label-text">ver más novedades</span>
-              </span>
-            </a>
-          </div>
+        </div>
+        <div class="landing-news-posts second-row">
+
+          <a class="news-card news-card-landing news-card-hover" href="hierarchy/fanarts.html">
+            <div class="news-card-cover-container">
+              <img class="news-card-cover" src="assets/img/posts/halloween-fanarts-results.jpg" alt="post2">
+              <div class="news-card-time">23 de oct. de 2025</div>
+            </div>
+            <div class="news-card-main">
+              <div class="news-card-row news-card-row-title">Halloween 2025 Concurso de Fanart: Resultados
+              </div>
+              <div class="news-card-row news-card-row-preview"></div>
+              <div class="news-card-row news-card-row-author">por <strong>Autor</strong></div>
+            </div>
+          </a>
+
+          <a class="news-card news-card-landing news-card-hover" href="hierarchy/news.html">
+            <div class="news-card-cover-container">
+              <img class="news-card-cover" src="assets/img/posts/songs-added.gif" alt="post3">
+              <div class="news-card-time">20 de oct. de 2025</div>
+            </div>
+            <div class="news-card-main">
+              <div class="news-card-row news-card-row-title">Nuevas canciones añadidas: Lista</div>
+              <div class="news-card-row news-card-row-preview"></div>
+              <div class="news-card-row news-card-row-author">por <strong>autor</strong></div>
+            </div>
+          </a>
+
+          <a class="news-card news-card-landing news-card-hover" href="hierarchy/news.html">
+            <div class="news-card-cover-container">
+              <img class="news-card-cover" src="assets/img/posts/omori-header.jpg" alt="post4">
+              <div class="news-card-time">15 de oct. de 2025</div>
+            </div>
+            <div class="news-card-main">
+              <div class="news-card-row news-card-row-title">Halloween 2025 Concurso de Fanart: Votaciones
+                abiertas</div>
+              <div class="news-card-row news-card-row-preview"></div>
+              <div class="news-card-row news-card-row-author">por <strong>autor</strong></div>
+            </div>
+          </a>
+
+        </div>
+        <div class="landing-news-posts third-row">
+
+          <a class="news-card news-card-landing news-card-hover" href="hierarchy/fanarts.html">
+            <div class="news-card-cover-container">
+              <img class="news-card-cover" src="assets/img/posts/halloween-fanarts-results.jpg" alt="post2">
+              <div class="news-card-time">23 de oct. de 2025</div>
+            </div>
+            <div class="news-card-main">
+              <div class="news-card-row news-card-row-title">Halloween 2025 Concurso de Fanart: Resultados
+              </div>
+              <div class="news-card-row news-card-row-preview"></div>
+              <div class="news-card-row news-card-row-author">por <strong>Autor</strong></div>
+            </div>
+          </a>
+
+          <a class="news-card news-card-landing news-card-hover" href="hierarchy/news.html">
+            <div class="news-card-cover-container">
+              <img class="news-card-cover" src="assets/img/posts/songs-added.gif" alt="post3">
+              <div class="news-card-time">20 de oct. de 2025</div>
+            </div>
+            <div class="news-card-main">
+              <div class="news-card-row news-card-row-title">Nuevas canciones añadidas: Lista</div>
+              <div class="news-card-row news-card-row-preview"></div>
+              <div class="news-card-row news-card-row-author">por <strong>autor</strong></div>
+            </div>
+          </a>
+
+          <a class="news-card news-card-landing news-card-hover" href="hierarchy/news.html">
+            <div class="news-card-cover-container">
+              <img class="news-card-cover" src="assets/img/posts/omori-header.jpg" alt="post4">
+              <div class="news-card-time">15 de oct. de 2025</div>
+            </div>
+            <div class="news-card-main">
+              <div class="news-card-row news-card-row-title">Halloween 2025 Concurso de Fanart: Votaciones
+                abiertas</div>
+              <div class="news-card-row news-card-row-preview"></div>
+              <div class="news-card-row news-card-row-author">por <strong>autor</strong></div>
+            </div>
+          </a>
+
+        </div>
+        <div class="landing-news-link">
+          <a href="hierarchy/news.html" class="show-more-link">
+            <span class="show-more-link-label">
+              <span class="show-more-link-label-text">ver más novedades</span>
+            </span>
+          </a>
         </div>
       </div>
-      <div class="ani-page container-landing-artists">
-        <div class="landing-artists">
-          Artistas destacados
-          <div class="landing-artists-gallery" id="artist-gallery">
+    </div>
+    <div class="ani-page container-landing-artists">
+      <div class="landing-artists">
+        Artistas destacados
+        <div class="landing-artists-gallery" id="artist-gallery">
 
-            <img src="assets/img/artists/ado.png" alt="Artista 1" class="gallery-image">
-            <img src="assets/img/artists/hatsune-miku.png" alt="Artista 2" class="gallery-image">
-            <img src="assets/img/artists/creepy-nuts.jpg" alt="Artista 3" class="gallery-image">
-            <img src="assets/img/artists/oxt.jpg" alt="Artista 4" class="gallery-image">
-            <img src="assets/img/artists/tk-from-ling-tosite-sigure.jpg" alt="Artista 5" class="gallery-image">
-            <img src="assets/img/artists/eve.jpg" alt="Artista 6" class="gallery-image">
-            <img src="assets/img/artists/lisa.jpg" alt="Artista 7" class="gallery-image">
-            <img src="assets/img/artists/the-oral-cigarettes.jpg" alt="Artista 8" class="gallery-image">
-            <img src="assets/img/artists/vk-blanka.jpg" alt="Artista 9" class="gallery-image">
-            <img src="assets/img/artists/yoasobi.jpg" alt="Artista 10" class="gallery-image">
+          <img src="assets/img/artists/ado.png" alt="Artista 1" class="gallery-image">
+          <img src="assets/img/artists/hatsune-miku.png" alt="Artista 2" class="gallery-image">
+          <img src="assets/img/artists/creepy-nuts.jpg" alt="Artista 3" class="gallery-image">
+          <img src="assets/img/artists/oxt.jpg" alt="Artista 4" class="gallery-image">
+          <img src="assets/img/artists/tk-from-ling-tosite-sigure.jpg" alt="Artista 5" class="gallery-image">
+          <img src="assets/img/artists/eve.jpg" alt="Artista 6" class="gallery-image">
+          <img src="assets/img/artists/lisa.jpg" alt="Artista 7" class="gallery-image">
+          <img src="assets/img/artists/the-oral-cigarettes.jpg" alt="Artista 8" class="gallery-image">
+          <img src="assets/img/artists/vk-blanka.jpg" alt="Artista 9" class="gallery-image">
+          <img src="assets/img/artists/yoasobi.jpg" alt="Artista 10" class="gallery-image">
 
-          </div>
-          <div class="landing-artists-link">
-            <a href="hierarchy/artists.html" class="show-more-link">
-              <span class="show-more-link-label">
-                <span class="show-more-link-label-text">ver más artistas</span>
-              </span>
-            </a>
-          </div>
+        </div>
+        <div class="landing-artists-link">
+          <a href="hierarchy/artists.html" class="show-more-link">
+            <span class="show-more-link-label">
+              <span class="show-more-link-label-text">ver más artistas</span>
+            </span>
+          </a>
         </div>
       </div>
     </div>
