@@ -310,15 +310,15 @@ a:visited {
 /*
 ===============================================================================
 
----------------FORM STYLES--------------------
+---------------LOGIN STYLES--------------------
 
 ===============================================================================
 */
 
 .login-box {
+  display: none;
   position: fixed;
   top: 50px;
-  left: 0;
   width: 100%;
   z-index: 999;
 }
@@ -334,26 +334,17 @@ a:visited {
   display: flex;
   flex-direction: column;
   font-size: 12px;
-  overflow: hidden;
+  overflow:hidden;
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   transition: none;
   width: 100%;
+  background-color: #333;
 }
 
 [data-visibility] {
   transition: opacity .12s;
   will-change: opacity;
-}
-
-.hidden {
-  display: none;
-}
-
-.login-box-section-login {
-  background-color: #333;
 }
 
 .login-box-section {
@@ -890,6 +881,7 @@ h2 {
 
   .login-box-content {
     transform: translateX(692px);
+    max-width: calc(1000px - 692px);
   }
 
   .ani-page {
