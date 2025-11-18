@@ -10,14 +10,6 @@
   <link rel="icon" sizes="48x48" href="assets/img/more-te-amo-removebg.svg">
 
   <link rel="stylesheet" href="css/style.css">
-
-  <script src="js/menus.js"></script>
-  <script src="js/gallery.js"></script>
-  <script src="https://kit.fontawesome.com/0df28cef70.js" crossorigin="anonymous"></script>
-
-  <!-- Tests -->
-
-
 </head>
 
 <body>
@@ -242,10 +234,34 @@
     <div class="nav-data" id="nav-data-landing"></div>
     <div class="login-box">
 
-      <div
-        class="login-box-content login-box-content-captcha js-click-menu js-nav2--centered-popup js-nav2--login-box js-click-menu--active"
-        data-click-menu-id="nav2-login-box" data-visibility="visible" style="transform: translateX(692px);">
+      <div class="login-box-content login-box-content-captcha" data-click-menu-id="nav2-login-box"
+        data-visibility="visible"><!--style="transform: translateX(692px);"-->
+        <form action="" class="login-box-section" data-remote method="post">
+          <input type="hidden" name="not-sure" autocomplete="off">
+          <h2 class="login-box-row login-box-row-title">Inicia sesión para continuar</h2>
+          <div class="login-box-row login-box-row-inputs">
+            <input class="login-box-form-input" name="username" placeholder="nombre de usuario" required="">
+            <input class="login-box-form-input" name="password" type="password" placeholder="contraseña" required="">
+          </div>
+          <div class="login-box-row">
+            <a href="hierarchy/password-reset.html" class="login-box-link">
+              He olvidado mis datos
+            </a>
+          </div>
+          <div class="login-box-row login-box-row-actions">
+            <div class="login-box-action">
+              <button class="btn-ani-big btn-ani-big-nav-popup" data-disable-with="Iniciando sesión..." disabled="">
+                <div class="btn-ani-big-content">
+                  <span class="btn-ani-big-left">
+                    Iniciar sesión
+                  </span>
 
+                  <span class="fas fa-fw fa-sign-in-alt"></span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
 
     </div>
@@ -279,7 +295,21 @@
           </div>
           <!--FUTURE EXPANSION-->
           <div class="landing-message-extra-container">
-            <div class="landing-message-extra landing-message-extra-bottom"></div>
+            <div class="landing-message-extra landing-message-extra-bottom">
+              <a href="hierarchy/game.html" class="btn-ani-big btn-ani-big-play-landing">
+                <span class="btn-ani-big-content">
+                  <span class="btn-ani-big-left">
+                    <span class="btn-ani-big-text-top">
+                      Jugar ahora
+                    </span>
+                  </span>
+
+                  <span class="btn-ani-big-icon">
+                    <span class="fa-solid fa-play"></span>
+                  </span>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -518,6 +548,12 @@
       </div>
     </footer>
   </div>
+
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/0df28cef70.js" crossorigin="anonymous"></script>
+  <script src="js/menus.js"></script>
+  <script src="js/gallery.js"></script>
+
 </body>
 
 </html>
