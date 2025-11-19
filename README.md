@@ -58,6 +58,7 @@ El proyecto aún no está desplegado públicamente. Se añadirá información cu
 * **CSS3**
 * **JavaScript**
 * Librería **FontAwesome** para iconos
+* Inspiración [Dribbble](https://dribbble.com/shots/24325045-Landing-Page-for-Yoga-Platform)
 
 ## Contribuir
 
