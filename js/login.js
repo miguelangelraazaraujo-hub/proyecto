@@ -9,45 +9,44 @@ document.addEventListener('DOMContentLoaded', function () {
   let previousWidth = window.innerWidth;
 
   function updateLoginBoxPositionOnResize() {
-    const currentWidth = window.innerWidth;
-    const widthDifference = currentWidth - previousWidth; // Puede ser positivo (crece) o negativo (decrece)
+    const Current_Width = window.innerWidth;
+    const Width_Difference = Current_Width - previousWidth; // Puede ser positivo (crece) o negativo (decrece)
 
     // Solo aplica entre 900px y 1000px
-    if (currentWidth >= 900 && currentWidth <= 1255) {
+    if (Current_Width >= 900 && Current_Width <= 1240) {
       // Obtener el valor actual de translateX
-      const computedStyle = getComputedStyle(Login_Box);
-      const transformValue = computedStyle.transform;
+      const Computed_Style = getComputedStyle(Login_Box);
+      const Transform_Value = Computed_Style.transform;
 
       let currentTranslateX = 540 + (window.innerWidth - 900);
 
-      if (transformValue !== 'none' && transformValue.includes('matrix')) {
-        // Parsear translateX de una matriz (ej: matrix(1, 0, 0, 1, 692, 0))
-        const matrix = transformValue.match(/matrix.*\((.+)\)/)[1].split(', ');
-        currentTranslateX = parseFloat(matrix[4]) || 540;
-      } else if (transformValue.includes('translateX')) {
+      if (Transform_Value !== 'none' && Transform_Value.includes('Matrix')) {
+        // Parsear translateX de una matriz (ej: Matrix(1, 0, 0, 1, 692, 0))
+        const Matrix = Transform_Value.match(/Matrix.*\((.+)\)/)[1].split(', ');
+        currentTranslateX = parseFloat(Matrix[4]) || 540;
+      } else if (Transform_Value.includes('translateX')) {
         // Parsear translateX directo (ej: translateX(692px))
-        const match = transformValue.match(/translateX\(([-\d.]+)px\)/);
+        const match = Transform_Value.match(/translateX\(([-\d.]+)px\)/);
         if (match) currentTranslateX = parseFloat(match[1]);
       }
 
-      // Calcular nuevo valor sumando o restando según si creció o decreció
-      const newTranslateX = currentTranslateX + widthDifference;
+      const New_TranslateX = currentTranslateX + Width_Difference;
 
-      // Aplicar nuevo transform
-      Login_Box.style.transform = `translateX(${newTranslateX}px)`;
-    } else if(currentWidth <= 899) {
+      Login_Box.style.transform = `translateX(${New_TranslateX}px)`;
+    } else if(Current_Width <= 899) {
       let currentTranslateX = 0;
+      Login_Box.style.transform = `translateX(${currentTranslateX}px)`;
+    } else if(Current_Width >= 1241) {
+      let currentTranslateX = 900;
       Login_Box.style.transform = `translateX(${currentTranslateX}px)`;
     }
 
-    // Actualizar el ancho anterior para la próxima comparación
-    previousWidth = currentWidth;
+    previousWidth = Current_Width;
   }
 
-  // Aplicar ajuste al cargar la página (por si ya está en una pantalla grande)
-  if (window.innerWidth > 900 && window.innerWidth <= 1000) {
+  if (window.innerWidth >= 900 && window.innerWidth <= 1000) {
     updateLoginBoxPositionOnResize();
-  //  let currentTranslateX = 0;
+    let currentTranslateX = 0;
   }
 
   // Escuchar cambios de tamaño de ventana

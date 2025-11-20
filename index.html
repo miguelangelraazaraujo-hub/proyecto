@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -237,10 +237,10 @@
       <div class="login-box-content login-box-content-captcha" data-click-menu-id="nav2-login-box"
         data-visibility="visible">
         <form action="a" class="login-box-section" data-remote method="post">
-          <input type="hidden" name="not-sure"> <!--autocomplete="off"-->
+          <input type="hidden" name="not-sure">
           <h2 class="login-box-row login-box-row-title">Inicia sesión para continuar</h2>
           <div class="login-box-row login-box-row-inputs">
-            <input class="login-box-form-input" name="username" placeholder="nombre de usuario" required="">
+            <input class="login-box-form-input" name="username" placeholder="nombre de usuario" autocomplete="off" required="">
             <input class="login-box-form-input" name="password" type="password" placeholder="contraseña" required="">
           </div>
           <div class="login-box-row">
@@ -268,6 +268,11 @@
           <div class="sign-up-box-row sign-up-box-row-inputs">
             <input class="sign-up-box-form-input" name="username" placeholder="nombre de usuario" required="">
             <input class="sign-up-box-form-input" name="password" type="password" placeholder="contraseña" required="">
+            <input class="sign-up-box-form-input" name="correo" type="email" placeholder="correo" required="">
+            <input class="sign-up-box-form-input" id="gender-m" name="gender" type="checkbox">
+            <label for="gender-m">Masculino</label>
+            <input class="sign-up-box-form-input" id="gender-f" name="gender" type="checkbox">
+            <label for="gender-f">Femenino</label>
           </div>
           <div class="sign-up-box-row sign-up-box-row-actions">
             <div class="sign-up-box-action">
@@ -519,7 +524,7 @@
           <!-- Fila 1 -->
           <div class="track-item">
             <span class="track-number">1</span>
-            <img src="/assets/img/artists/ado.png" alt="Ado" class="track-artwork" />
+            <img src="assets/img/artists/ado.png" alt="Ado" class="track-artwork">
             <div class="track-info">
               <div class="track-title">Usseewa</div>
               <div class="track-artist">Ado</div>
@@ -530,7 +535,7 @@
           <!-- Fila 2 -->
           <div class="track-item">
             <span class="track-number">2</span>
-            <img src="/assets/img/artists/creepy-nuts.jpg" alt="Creepy Nuts" class="track-artwork" />
+            <img src="assets/img/artists/creepy-nuts.jpg" alt="Creepy Nuts" class="track-artwork">
             <div class="track-info">
               <div class="track-title">Bling-Bang-Bang-Born</div>
               <div class="track-artist">Creepy Nuts</div>
@@ -541,7 +546,7 @@
           <!-- Fila 3 -->
           <div class="track-item">
             <span class="track-number">3</span>
-            <img src="/assets/img/artists/oxt.jpg" alt="OxT" class="track-artwork" />
+            <img src="assets/img/artists/oxt.jpg" alt="OxT" class="track-artwork">
             <div class="track-info">
               <div class="track-title">Clattanoia</div>
               <div class="track-artist">OxT</div>
@@ -552,7 +557,7 @@
           <!-- Fila 4 -->
           <div class="track-item">
             <span class="track-number">4</span>
-            <img src="/assets/img/artists/oxt.jpg" alt="OxT" class="track-artwork" />
+            <img src="assets/img/artists/oxt.jpg" alt="OxT" class="track-artwork">
             <div class="track-info">
               <div class="track-title">HOLLOW HUNGER</div>
               <div class="track-artist">OxT</div>
@@ -563,7 +568,7 @@
           <!-- Fila 5 -->
           <div class="track-item">
             <span class="track-number">5</span>
-            <img src="/assets/img/artists/eve.jpg" alt="Eve" class="track-artwork" />
+            <img src="assets/img/artists/eve.jpg" alt="Eve" class="track-artwork">
             <div class="track-info">
               <div class="track-title">Kaikai Kitan</div>
               <div class="track-artist">Eve</div>
@@ -574,8 +579,8 @@
           <!-- Fila 6 -->
           <div class="track-item">
             <span class="track-number">6</span>
-            <img src="/assets/img/artists/tk-from-ling-tosite-sigure.jpg" alt="TK from Ling tosite sigure"
-              class="track-artwork" />
+            <img src="assets/img/artists/tk-from-ling-tosite-sigure.jpg" alt="TK from Ling tosite sigure"
+              class="track-artwork">
             <div class="track-info">
               <div class="track-title">unravel</div>
               <div class="track-artist">TK from Ling tosite sigure</div>
@@ -586,7 +591,7 @@
           <!-- Fila 7 -->
           <div class="track-item">
             <span class="track-number">7</span>
-            <img src="/assets/img/artists/lisa.jpg" alt="LiSA" class="track-artwork" />
+            <img src="assets/img/artists/lisa.jpg" alt="LiSA" class="track-artwork">
             <div class="track-info">
               <div class="track-title">紅蓮華</div>
               <div class="track-artist">LiSA</div>
@@ -597,7 +602,7 @@
           <!-- Fila 8 -->
           <div class="track-item">
             <span class="track-number">8</span>
-            <img src="/assets/img/artists/linked-horizon.jpg" alt="Linked Horizon" class="track-artwork" />
+            <img src="assets/img/artists/linked-horizon.jpg" alt="Linked Horizon" class="track-artwork">
             <div class="track-info">
               <div class="track-title">Guren no Yumiya Tv Size Ver.</div>
               <div class="track-artist">Linked Horizon</div>
@@ -608,7 +613,7 @@
           <!-- Fila 9 -->
           <div class="track-item">
             <span class="track-number">9</span>
-            <img src="/assets/img/artists/vk-blanka.jpg" alt="VK Blanka" class="track-artwork" />
+            <img src="assets/img/artists/vk-blanka.jpg" alt="VK Blanka" class="track-artwork">
             <div class="track-info">
               <div class="track-title">Black Catcher</div>
               <div class="track-artist">VK Blanka</div>
@@ -619,7 +624,7 @@
           <!-- Fila 10 -->
           <div class="track-item">
             <span class="track-number">10</span>
-            <img src="/assets/img/artists/the-oral-cigarettes.jpg" alt="THE ORAL CIGARETTES" class="track-artwork" />
+            <img src="assets/img/artists/the-oral-cigarettes.jpg" alt="THE ORAL CIGARETTES" class="track-artwork">
             <div class="track-info">
               <div class="track-title">Kyouran Hey Kids!!</div>
               <div class="track-artist">THE ORAL CIGARETTES</div>

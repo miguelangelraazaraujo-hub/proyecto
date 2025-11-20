@@ -395,6 +395,7 @@ input {
   display: flex;
   flex: none;
   margin: 0 0 10px;
+  position: relative;
 }
 
 h2 {
@@ -1129,7 +1130,7 @@ h2 {
   .login-box-landing {
     position: relative;
     top: 0;
-    transform: translateX(540px);
+    /* transform: translateX(540px); */
   }
 
   .login-box-content {
