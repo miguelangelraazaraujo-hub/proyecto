@@ -1070,6 +1070,11 @@ h2 {
     padding: 10px 16px 10px 40px;
   }
 
+  /* --- LOGIN --- */
+  .login-box-landing {
+    /* transform: translateX(0); */
+  }
+
   /* --- HERO SECTION --- */
   .landing-info {
     font-size: 12px;
@@ -1126,17 +1131,16 @@ h2 {
 /* Small devices (portrait tablets and large phones, 900px and up) */
 @media only screen and (min-width: 900px) {
 
-
   .login-box-landing {
     position: relative;
     top: 0;
+    /* transform: translateX(540px); */
   }
 
   .login-box-content {
     border-radius: 4px;
     margin-top: 5px;
     width: 300px;
-    transform: translateX(692px);
   }
 
   .login-box-content-captcha {
@@ -1144,7 +1148,6 @@ h2 {
   }
 
   .landing-hero-icon {
-    /* opacity: 1; */
     pointer-events: none;
   }
 
