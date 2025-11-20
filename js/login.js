@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const Button = document.querySelector('.js-user-link');
   const Login_Box = document.querySelector('.login-box');
-  //const Sign_Up_Box = document.querySelector('.sign-up-box');
 
   // Reference to the menu
   const Mobile_Menu = document.querySelector('[data-click-menu-id="mobile-menu"]');
@@ -22,11 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         Login_Box.style.display = 'none';
       }
-      //if (Sign_Up_Box.style.display === 'none' || getComputedStyle(Sign_Up_Box).display === 'none') {
-      //  Sign_Up_Box.style.display = 'block';
-      //} else {
-      //  Sign_Up_Box.style.display = 'none';
-      //}
     });
 
     // Close the form if a clic is done outside of it
@@ -36,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Check if the clic was done outside of the form 
         if (!Login_Box.contains(e.target) && !Button.contains(e.target)) {
           Login_Box.style.display = 'none';
-          //Sign_Up_Box.style.display = 'none';
         }
       }
     });
