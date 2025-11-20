@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!Hero_Icon) return;
 
   let lastScrollY = window.scrollY;
-  const Speed = 0.5;
+  const Speed = 0.7;
 
   // --- Function to update opacity based on screen size ---
   function updateOpacityBasedOnWidth() {
@@ -36,9 +36,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Fade-in/slide-up effect
     if (Scroll_Y > lastScrollY) {
-      Hero_Icon.style.opacity = '0'; // down → hide
+      // Down  → hide
+      Hero_Icon.style.opacity = '0';
     } else {
-      Hero_Icon.style.opacity = Math.min(1 + Scroll_Y * 0.001); // up → show
+      // Up → show only if it is at the top
+      if (Scroll_Y < 300 && this.window.innerWidth > 900) { // <-- limit
+        Hero_Icon.style.opacity = '1';
+      }
+      // Scrolling up but not has reached the limit 
     }
 
     lastScrollY = Scroll_Y;

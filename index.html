@@ -236,8 +236,8 @@
 
       <div class="login-box-content login-box-content-captcha" data-click-menu-id="nav2-login-box"
         data-visibility="visible">
-        <form action="" class="login-box-section" data-remote method="post">
-          <input type="hidden" name="not-sure" autocomplete="off">
+        <form action="a" class="login-box-section" data-remote method="post">
+          <input type="hidden" name="not-sure"> <!--autocomplete="off"-->
           <h2 class="login-box-row login-box-row-title">Inicia sesión para continuar</h2>
           <div class="login-box-row login-box-row-inputs">
             <input class="login-box-form-input" name="username" placeholder="nombre de usuario" required="">
@@ -251,13 +251,34 @@
           <div class="login-box-row login-box-row-actions">
             <div class="login-box-action">
               <button class="btn-ani-big btn-ani-big-nav-popup" data-disable-with="Iniciando sesión..." disabled="">
-                <div class="btn-ani-big-content">
+                <span class="btn-ani-big-content">
                   <span class="btn-ani-big-left">
                     Iniciar sesión
                   </span>
 
                   <span class="fas fa-fw fa-sign-in-alt"></span>
-                </div>
+                </span>
+              </button>
+            </div>
+          </div>
+        </form>
+        <form action="a" class="sign-up-box-section" data-remote method="post">
+          <input type="hidden" name="not-sure"> <!--autocomplete="off"-->
+          <h2 class="sign-up-box-row sign-up-box-row-title">Registrarse</h2>
+          <div class="sign-up-box-row sign-up-box-row-inputs">
+            <input class="sign-up-box-form-input" name="username" placeholder="nombre de usuario" required="">
+            <input class="sign-up-box-form-input" name="password" type="password" placeholder="contraseña" required="">
+          </div>
+          <div class="sign-up-box-row sign-up-box-row-actions">
+            <div class="sign-up-box-action">
+              <button class="btn-ani-big btn-ani-big-nav-popup" data-disable-with="Iniciando sesión..." disabled="">
+                <span class="btn-ani-big-content">
+                  <span class="btn-ani-big-left">
+                    Crear cuenta
+                  </span>
+
+                  <span class="fas fa-fw fa-sign-in-alt"></span>
+                </span>
               </button>
             </div>
           </div>
