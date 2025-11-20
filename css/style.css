@@ -442,6 +442,10 @@ h2 {
   margin: 5px;
 }
 
+.fa-sign-in-alt {
+  margin-right: 5px;
+}
+
 .btn-ani-big-nav-popup {
   height: 35px;
   padding: 7px 10px;
@@ -461,29 +465,6 @@ h2 {
 
 ===============================================================================
 */
-
-.sign-up-box {
-  display: none;
-  position: fixed;
-  top: 263px;
-  width: 100%;
-  z-index: 999;
-}
-
-.sign-up-box-content {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
-  color: #999;
-  display: block;
-  /* flex-direction: column; */
-  font-size: 12px;
-  overflow: hidden;
-  /* position: absolute; */
-  transform: translateZ(0);
-  /* top: 0; */
-  transition: none;
-  width: 100%;
-  background-color: #333;
-}
 
 .sign-up-box-section {
   display: flex;
@@ -540,6 +521,10 @@ h2 {
 
 .sign-up-box-action {
   margin: 5px;
+}
+
+.fa-user-plus {
+  margin-right: 5px;
 }
 
 /*
