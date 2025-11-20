@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const widthDifference = currentWidth - previousWidth; // Puede ser positivo (crece) o negativo (decrece)
 
     // Solo aplica entre 900px y 1000px
-    if (currentWidth >= 900 && currentWidth <= 1200) {
+    if (currentWidth >= 900 && currentWidth <= 1255) {
       // Obtener el valor actual de translateX
       const computedStyle = getComputedStyle(Login_Box);
       const transformValue = computedStyle.transform;
 
-      let currentTranslateX = 540;
+      let currentTranslateX = 540 + (window.innerWidth - 900);
 
       if (transformValue !== 'none' && transformValue.includes('matrix')) {
         // Parsear translateX de una matriz (ej: matrix(1, 0, 0, 1, 692, 0))
