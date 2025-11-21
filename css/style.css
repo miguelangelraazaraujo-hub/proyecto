@@ -503,6 +503,24 @@ h2 {
   padding: 10px 5px;
 }
 
+#gender-m {
+  width: 5%;
+  display: inline;
+  margin-right: 5px;
+}
+
+#gender-f {
+  width: 5%;
+  display: inline;
+  margin-right: 5px;
+}
+
+label {
+  width: 50%;
+  display: inline;
+  margin-right: 5px;
+}
+
 .sign-up-box-link {
   background: none;
   border: none;
