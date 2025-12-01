@@ -5,29 +5,26 @@ document.addEventListener('DOMContentLoaded', function () {
   // Reference to the menu
   const Mobile_Menu = document.querySelector('[data-click-menu-id="mobile-menu"]');
 
-  // --- Nueva sección: Ajuste de translateX basado en si la pantalla crece o decrece ---
+  // --- Change the translateX depending on the size of the screen ---
   let previousWidth = window.innerWidth;
 
   function updateLoginBoxPositionOnResize() {
     const Current_Width = window.innerWidth;
-    const Width_Difference = Current_Width - previousWidth; // Puede ser positivo (crece) o negativo (decrece)
+    const Width_Difference = Current_Width - previousWidth; // Can be positive or negative
 
-    // Solo aplica entre 900px y 1000px
+    //  Only apply bewteen 900px and 1000px
     if (Current_Width >= 900 && Current_Width <= 1240) {
-      // Obtener el valor actual de translateX
       const Computed_Style = getComputedStyle(Login_Box);
       const Transform_Value = Computed_Style.transform;
 
       let currentTranslateX = 540 + (window.innerWidth - 900);
 
       if (Transform_Value !== 'none' && Transform_Value.includes('Matrix')) {
-        // Parsear translateX de una matriz (ej: Matrix(1, 0, 0, 1, 692, 0))
         const Matrix = Transform_Value.match(/Matrix.*\((.+)\)/)[1].split(', ');
         currentTranslateX = parseFloat(Matrix[4]) || 540;
       } else if (Transform_Value.includes('translateX')) {
-        // Parsear translateX directo (ej: translateX(692px))
-        const match = Transform_Value.match(/translateX\(([-\d.]+)px\)/);
-        if (match) currentTranslateX = parseFloat(match[1]);
+        const Match = Transform_Value.match(/translateX\(([-\d.]+)px\)/);
+        if (Match) currentTranslateX = parseFloat(Match[1]);
       }
 
       const New_TranslateX = currentTranslateX + Width_Difference;
@@ -49,10 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentTranslateX = 0;
   }
 
-  // Escuchar cambios de tamaño de ventana
+  // Listen to changes in the size of the windows
   window.addEventListener('resize', updateLoginBoxPositionOnResize);
 
-  // --- Fin de la nueva sección ---
+  // --- End of the new section ---
 
   if (Button && Login_Box) {
     Button.addEventListener('click', function (e) {
