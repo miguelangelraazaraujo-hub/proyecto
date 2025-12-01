@@ -1145,20 +1145,35 @@ label {
 /* Small devices (portrait tablets and large phones, 900px and up) */
 @media only screen and (min-width: 900px) {
 
-  .login-box-landing {
-    position: relative;
-    top: 0;
-    /* transform: translateX(540px); */
+  /* --- Cabecera / Menú --- */
+  .navbar-mobile-panel {
+    font-size: 20px;
+    padding: 0 15px;
   }
 
-  .login-box-content {
-    border-radius: 4px;
-    margin-top: 5px;
-    width: 300px;
+  /* --- Hero Section --- */
+  .landing-video {
+    height: 550px;
   }
 
-  .login-box-content-captcha {
-    width: 342px;
+  .landing-bg {
+    height: 550px;
+  }
+
+  .landing-info {
+    font-size: 14px;
+    text-align: right;
+    padding: 30px 50px;
+  }
+
+  .landing-message-welcome-main {
+    font-size: 26px;
+    text-align: right;
+  }
+
+  .landing-message-welcome-sub {
+    font-size: 18px;
+    text-align: right;
   }
 
   .landing-hero-icon {
@@ -1183,11 +1198,6 @@ label {
     }
   }
 
-  .landing-info {
-    font-size: 14px;
-    text-align: right;
-  }
-
   .landing-message-extra {
     align-items: flex-end;
   }
@@ -1196,18 +1206,32 @@ label {
     opacity: 0;
   }
 
-  .landing-message-welcome-main {
-    font-size: 26px;
-    text-align: right;
+  /* --- Login Box --- */
+  .login-box {
+    top: 20px;
+    transform: translateX(650px);
   }
 
-  .landing-message-welcome-sub {
-    font-size: 18px;
-    text-align: right;
+  .login-box-landing {
+    position: relative;
+    top: 0;
+    /* transform: translateX(540px); */
   }
 
-  .landing-hero-message-extra {
-    align-items: flex-end;
+  .login-box-content {
+    border-radius: 4px;
+    margin-top: 5px;
+    width: 320px;
+  }
+
+  .login-box-content-captcha {
+    width: 342px;
+  }
+
+  /* --- News --- */
+  .landing-news-posts:not(.first-row, .first-post, .third-row) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .landing-news-posts {
@@ -1215,31 +1239,89 @@ label {
     margin: 0 -10px;
   }
 
+  .news-card-cover-container {
+    height: 180px;
+  }
+
+  .news-card-row-title {
+    font-size: 15px;
+  }
+
+  /* --- Artistas --- */
   .landing-artists-gallery {
-    max-width: 429PX;
+    width: 380px;
+    height: 500px;
+    margin: 30px auto;
+    max-width: 429px;
+  }
+
+  /* --- Tracks --- */
+  .tracks-header {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .track-title {
+    font-size: 16px;
+  }
+
+  .track-artist {
+    font-size: 14px;
+  }
+
+  /* --- Footer --- */
+  .landing-sitemap {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
   }
 
   .landing-sitemap-header {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .landing-sitemap-link {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .show-more-link-label-text {
+    font-size: 13px;
   }
 
 }
 
 
-/* Large devices (laptops/desktops, 1034px and up) */
+/* Large devices (laptops/desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
+  /* --- Cabecera / Menú --- */
   .navbar-mobile-panel {
     text-size-adjust: auto;
     font-size: 24px;
   }
 
+  /* --- Hero Section --- */
+  .landing-video {
+    height: 600px;
+  }
+
+  .landing-bg {
+    height: 600px;
+  }
+
   .landing-info {
     font-size: 16px;
+    text-align: right;
+    padding: 40px 70px;
+  }
+
+  .landing-message-welcome-main {
+    font-size: 32px;
+    text-align: right;
+  }
+
+  .landing-message-welcome-sub {
+    font-size: 22px;
+    text-align: right;
   }
 
   .landing-message-logo {
@@ -1247,12 +1329,52 @@ label {
     width: 200px;
   }
 
-  .landing-message-welcome-main {
-    font-size: 32px;
+  /* --- Login Box --- */
+  .login-box {
+    top: 30px;
+    transform: translateX(700px); /* o usa JS para ajuste dinámico */
   }
 
-  .landing-message-welcome-sub {
-    font-size: 22px;
+  /* --- News --- */
+  .landing-news-posts:not(.first-row, .first-post, .third-row) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .news-card-cover-container {
+    height: 200px;
+  }
+
+  .news-card-row-title {
+    font-size: 16px;
+  }
+
+  /* --- Artistas --- */
+  .landing-artists-gallery {
+    width: 480px;
+    height: 600px;
+    margin: 40px auto;
+  }
+
+  /* --- Tracks --- */
+  .tracks-header {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .track-title {
+    font-size: 17px;
+  }
+
+  .track-artist {
+    font-size: 15px;
+  }
+
+  /* --- Footer --- */
+  .landing-sitemap {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+    max-width: 1000px;
   }
 
   .landing-sitemap-header {
@@ -1260,6 +1382,10 @@ label {
   }
 
   .landing-sitemap-link {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .show-more-link-label-text {
+    font-size: 14px;
   }
 }
