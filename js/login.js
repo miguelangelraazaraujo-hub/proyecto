@@ -1,44 +1,44 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const Button = document.querySelector('.js-user-link');
-  const Login_Box = document.querySelector('.login-box');
+  const BUTTON = document.querySelector('.js-user-link');
+  const LOGIN_BOX = document.querySelector('.login-box');
 
   // Reference to the menu
-  const Mobile_Menu = document.querySelector('[data-click-menu-id="mobile-menu"]');
+  const MOBILE_MENU = document.querySelector('[data-click-menu-id="mobile-menu"]');
 
   // --- Change the translateX depending on the size of the screen ---
   let previousWidth = window.innerWidth;
 
   function updateLoginBoxPositionOnResize() {
-    const Current_Width = window.innerWidth;
-    const Width_Difference = Current_Width - previousWidth; // Can be positive or negative
+    const CURRENT_WIDTH = window.innerWidth;
+    const WIDTH_DIFFERENCE = CURRENT_WIDTH - previousWidth; // Can be positive or negative
 
     //  Only apply bewteen 900px and 1000px
-    if (Current_Width >= 900 && Current_Width <= 1240) {
-      const Computed_Style = getComputedStyle(Login_Box);
-      const Transform_Value = Computed_Style.transform;
+    if (CURRENT_WIDTH >= 900 && CURRENT_WIDTH <= 1240) {
+      const COMPUTED_STYLE = getComputedStyle(LOGIN_BOX);
+      const TRANSFORM_VALUE = COMPUTED_STYLE.transform;
 
       let currentTranslateX = 540 + (window.innerWidth - 900);
 
-      if (Transform_Value !== 'none' && Transform_Value.includes('Matrix')) {
-        const Matrix = Transform_Value.match(/Matrix.*\((.+)\)/)[1].split(', ');
-        currentTranslateX = parseFloat(Matrix[4]) || 540;
-      } else if (Transform_Value.includes('translateX')) {
-        const Match = Transform_Value.match(/translateX\(([-\d.]+)px\)/);
-        if (Match) currentTranslateX = parseFloat(Match[1]);
+      if (TRANSFORM_VALUE !== 'none' && TRANSFORM_VALUE.includes('MATRIX')) {
+        const MATRIX = TRANSFORM_VALUE.match(/MATRIX.*\((.+)\)/)[1].split(', ');
+        currentTranslateX = parseFloat(MATRIX[4]) || 540;
+      } else if (TRANSFORM_VALUE.includes('translateX')) {
+        const MATCH = TRANSFORM_VALUE.match(/translateX\(([-\d.]+)px\)/);
+        if (MATCH) currentTranslateX = parseFloat(MATCH[1]);
       }
 
-      const New_TranslateX = currentTranslateX + Width_Difference;
+      const NEW_TRANSLATE_X = currentTranslateX + WIDTH_DIFFERENCE;
 
-      Login_Box.style.transform = `translateX(${New_TranslateX}px)`;
-    } else if(Current_Width <= 899) {
+      LOGIN_BOX.style.transform = `translateX(${NEW_TRANSLATE_X}px)`;
+    } else if(CURRENT_WIDTH <= 899) {
       let currentTranslateX = 0;
-      Login_Box.style.transform = `translateX(${currentTranslateX}px)`;
-    } else if(Current_Width >= 1241) {
+      LOGIN_BOX.style.transform = `translateX(${currentTranslateX}px)`;
+    } else if(CURRENT_WIDTH >= 1241) {
       let currentTranslateX = 900;
-      Login_Box.style.transform = `translateX(${currentTranslateX}px)`;
+      LOGIN_BOX.style.transform = `translateX(${currentTranslateX}px)`;
     }
 
-    previousWidth = Current_Width;
+    previousWidth = CURRENT_WIDTH;
   }
 
   if (window.innerWidth >= 900 && window.innerWidth <= 1000) {
@@ -51,30 +51,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- End of the new section ---
 
-  if (Button && Login_Box) {
-    Button.addEventListener('click', function (e) {
+  if (BUTTON && LOGIN_BOX) {
+    BUTTON.addEventListener('click', function (e) {
       e.stopPropagation();
 
       // If the menu is open, close it
-      if (Mobile_Menu && Mobile_Menu.classList.contains('visible')) {
-        Mobile_Menu.classList.remove('visible');
+      if (MOBILE_MENU && MOBILE_MENU.classList.contains('visible')) {
+        MOBILE_MENU.classList.remove('visible');
       }
 
       // Toggle visibility
-      if (Login_Box.style.display === 'none' || getComputedStyle(Login_Box).display === 'none') {
-        Login_Box.style.display = 'block';
+      if (LOGIN_BOX.style.display === 'none' || getComputedStyle(LOGIN_BOX).display === 'none') {
+        LOGIN_BOX.style.display = 'block';
       } else {
-        Login_Box.style.display = 'none';
+        LOGIN_BOX.style.display = 'none';
       }
     });
 
     // Close the form if a clic is done outside of it
     document.addEventListener('click', function (e) {
       // Check if the form is visible
-      if ((getComputedStyle(Login_Box).display) !== 'none') {
+      if ((getComputedStyle(LOGIN_BOX).display) !== 'none') {
         // Check if the clic was done outside of the form 
-        if (!Login_Box.contains(e.target) && !Button.contains(e.target)) {
-          Login_Box.style.display = 'none';
+        if (!LOGIN_BOX.contains(e.target) && !BUTTON.contains(e.target)) {
+          LOGIN_BOX.style.display = 'none';
         }
       }
     });

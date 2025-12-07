@@ -1,56 +1,56 @@
 document.addEventListener("DOMContentLoaded", () => {
   // --- Toggle main menu ---
-  const Menu_Button = document.querySelector(".navbar-mobile-toggle");
-  const Mobile_Menu = document.querySelector('[data-click-menu-id="mobile-menu"]');
+  const MENU_BUTTON = document.querySelector(".navbar-mobile-toggle");
+  const MOBILE_MENU = document.querySelector('[data-click-menu-id="mobile-menu"]');
 
-  Menu_Button.addEventListener("click", (e) => {
+  MENU_BUTTON.addEventListener("click", (e) => {
     e.preventDefault();
-    Mobile_Menu.classList.toggle("visible");
+    MOBILE_MENU.classList.toggle("visible");
   });
 
-  // --- Toggle submenus ---
-  const Submenu_Buttons = document.querySelectorAll(".navbar-mobile-item-main");
+  // --- Toggle SUBMENUs ---
+  const SUBMENU_BUTTONS = document.querySelectorAll(".navbar-mobile-item-main");
 
-  Submenu_Buttons.forEach(btn => {
+  SUBMENU_BUTTONS.forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.preventDefault(); // prevent navigation if the element is an <a> tag
 
-      const Menu_Id = btn.dataset.clickMenuTarget;
-      const Submenu = document.querySelector(`[data-click-menu-id="${Menu_Id}"]`);
-      if (!Submenu) return;
+      const MENU_ID = btn.dataset.clickMenuTarget;
+      const SUBMENU = document.querySelector(`[data-click-menu-id="${MENU_ID}"]`);
+      if (!SUBMENU) return;
 
-      // --- Close other open submenus ---
-      document.querySelectorAll('.navbar-mobile-item-submenu.visible').forEach(openMenu => {
-        if (openMenu !== Submenu) {
+      // --- Close other open SUBMENUs ---
+      document.querySelectorAll('.navbar-mobile-item-SUBMENU.visible').forEach(openMenu => {
+        if (openMenu !== SUBMENU) {
           openMenu.classList.remove("visible");
 
-          // Find the button that controls this submenu
-          const Parent_Button = document.querySelector(
+          // Find the button that controls this SUBMENU
+          const PARENT_BUTTON = document.querySelector(
             `.navbar-mobile-item-main[data-click-menu-target="${openMenu.dataset.clickMenuId}"]`
           );
 
-          if (Parent_Button) {
-            const Icon_Closed = Parent_Button.querySelector(".navbar-mobile-item-icon-closed");
-            const Icon_Opened = Parent_Button.querySelector(".navbar-mobile-item-icon-opened");
+          if (PARENT_BUTTON) {
+            const ICON_CLOSED = PARENT_BUTTON.querySelector(".navbar-mobile-item-icon-closed");
+            const ICON_OPENED = PARENT_BUTTON.querySelector(".navbar-mobile-item-icon-opened");
 
-            if (Icon_Closed && Icon_Opened) {
-              Icon_Closed.classList.remove("hidden");
-              Icon_Opened.classList.remove("visible");
+            if (ICON_CLOSED && ICON_OPENED) {
+              ICON_CLOSED.classList.remove("hidden");
+              ICON_OPENED.classList.remove("visible");
             }
           }
         }
       });
 
-      // --- Toggle visibility of the current submenu ---
-      Submenu.classList.toggle("visible");
+      // --- Toggle visibility of the current SUBMENU ---
+      SUBMENU.classList.toggle("visible");
 
       // --- Toggle icons of the current button ---
-      const Icon_Closed = btn.querySelector(".navbar-mobile-item-icon-closed");
-      const Icon_Opened = btn.querySelector(".navbar-mobile-item-icon-opened");
+      const ICON_CLOSED = btn.querySelector(".navbar-mobile-item-icon-closed");
+      const ICON_OPENED = btn.querySelector(".navbar-mobile-item-icon-opened");
 
-      if (Icon_Closed && Icon_Opened) {
-        Icon_Closed.classList.toggle("hidden");
-        Icon_Opened.classList.toggle("visible");
+      if (ICON_CLOSED && ICON_OPENED) {
+        ICON_CLOSED.classList.toggle("hidden");
+        ICON_OPENED.classList.toggle("visible");
       }
     });
   });

@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const Hero_Icon = document.querySelector('.landing-hero-icon');
+  const HERO_ICON = document.querySelector('.landing-hero-icon');
 
-  if (!Hero_Icon) return;
+  if (!HERO_ICON) return;
 
   let lastScrollY = window.scrollY;
-  const Speed = 0.7;
+  const SPEED = 0.7;
 
   // --- Function to update opacity based on screen size ---
   function updateOpacityBasedOnWidth() {
@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
       // If we are on desktop, we force the initial opacity to 1
       // But we respect the scroll state
       if (window.scrollY <= lastScrollY) {
-        Hero_Icon.style.opacity = '1';
+        HERO_ICON.style.opacity = '1';
       }
     } else {
       // On mobile, we don't apply the scroll effect
-      Hero_Icon.style.opacity = '0';
+      HERO_ICON.style.opacity = '0';
     }
   }
 
@@ -29,23 +29,23 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', function () {
     if (window.innerWidth < 768) return;
 
-    const Scroll_Y = window.scrollY;
-    const Translate_Y = Scroll_Y * Speed;
+    const SCROLL_Y = window.scrollY;
+    const TRANSLATE_Y = SCROLL_Y * SPEED;
 
-    Hero_Icon.style.transform = `translateY(${Translate_Y}px)`;
+    HERO_ICON.style.transform = `translateY(${TRANSLATE_Y}px)`;
 
     // Fade-in/slide-up effect
-    if (Scroll_Y > lastScrollY) {
+    if (SCROLL_Y > lastScrollY) {
       // Down  → hide
-      Hero_Icon.style.opacity = '0';
+      HERO_ICON.style.opacity = '0';
     } else {
       // Up → show only if it is at the top
-      if (Scroll_Y < 300 && this.window.innerWidth > 900) { // <-- limit
-        Hero_Icon.style.opacity = '1';
+      if (SCROLL_Y < 300 && this.window.innerWidth > 900) { // <-- limit
+        HERO_ICON.style.opacity = '1';
       }
       // Scrolling up but not has reached the limit 
     }
 
-    lastScrollY = Scroll_Y;
+    lastScrollY = SCROLL_Y;
   });
 });

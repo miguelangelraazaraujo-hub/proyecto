@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const Gallery = document.getElementById('artist-gallery');
-  const Images = Gallery.querySelectorAll('.gallery-image');
+  const GALLERY = document.getElementById('artist GALLERY');
+  const IMAGES = GALLERY.querySelectorAll(' GALLERY-image');
   let currentIndex = 0;
 
   // Function to show the actual image
   function showImage(index) {
     // Hide every image
-    Images.forEach(img => img.style.opacity = '0');
+    IMAGES.forEach(img => img.style.opacity = '0');
 
     // display original image
-    Images[index].style.opacity = '1';
+    IMAGES[index].style.opacity = '1';
   }
 
   // Change every 15 seconds
   setInterval(() => {
-    currentIndex = (currentIndex + 1) % Images.length; // Looping
+    currentIndex = (currentIndex + 1) % IMAGES.length; // Looping
     showImage(currentIndex);
   }, 6000); // 6 seconds
 });
