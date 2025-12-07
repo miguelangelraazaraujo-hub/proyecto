@@ -937,7 +937,7 @@ label {
 /* -------------------  Artist gallery  -------------------------- */
 
 .container-landing-artists {
-  height: 100vh;
+  height: fit-content;
   min-height: 100vh;
   background-color: rgb(25, 25, 36, 0.7);
 }
@@ -982,6 +982,7 @@ label {
 .landing-artists-link {
   padding: 10px;
   bottom: 0;
+  margin-top: 10px;
 }
 
 /* -----------------------  Landing Artist 2  ----------------------- */
