@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const GALLERY = document.getElementById('artist GALLERY');
-  const IMAGES = GALLERY.querySelectorAll(' GALLERY-image');
+  const GALLERY = document.getElementById('artist-gallery');
+  const IMAGES = GALLERY.querySelectorAll('.gallery-image');
   let currentIndex = 0;
 
   // Function to show the actual image
