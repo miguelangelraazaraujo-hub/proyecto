@@ -1127,6 +1127,20 @@ label {
   margin-top: 10px;
 }
 
+/* -----------------------  My Playlist (en index)  ------------------------- */
+
+.container-landing-my-playlist {
+  padding: 40px 20px;
+  background-color: rgba(25, 25, 36, 0.7);
+  color: white;
+  height: fit-content;
+}
+
+.landing-my-playlist {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
