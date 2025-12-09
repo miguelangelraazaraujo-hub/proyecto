@@ -1010,6 +1010,11 @@ label {
   width: 200px;
 }
 
+.artist-portrait-wrapper:hover {
+  transform: scale(1.08, 1.08);
+  transition: all ease-in 5.0;
+}
+
 .artist-portrait-index {
   height: 200px;
   margin: 0;
@@ -1112,6 +1117,23 @@ label {
 .track-artist {
   font-size: 14px;
   color: #ccc;
+}
+
+.liked-tracks {
+  color: #fff;
+  margin: 0;
+}
+
+.liked-tracks:hover {
+  color: #2d3e69;
+}
+
+#switch:checked + .liked-tracks {
+  color: #2d3e69;
+}
+
+.track-details {
+  display: flex;
 }
 
 .track-duration {
