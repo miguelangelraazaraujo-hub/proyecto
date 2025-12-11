@@ -698,12 +698,9 @@
               <div class="track-artist">Ado</div>
             </div>
             <div class="track-details">
-              <label class="liked-tracks">
-                <input type="checkbox" id="switch" hidden>
-                <div class="liked-tracks">
-                  <span class="fas fa-heart"></span>
-                </div>
-              </label>
+              <div class="liked-tracks">
+                <span class="fas fa-heart"></span>
+              </div>
               <div class="track-duration">
                 <span class="track-duration">3:26</span>
               </div>
@@ -719,12 +716,9 @@
               <div class="track-artist">Creepy Nuts</div>
             </div>
             <div class="track-details">
-              <label class="liked-tracks">
-                <input type="checkbox" id="switch" hidden>
-                <div class="liked-tracks">
-                  <span class="fas fa-heart"></span>
-                </div>
-              </label>
+              <div class="liked-tracks">
+                <span class="fas fa-heart"></span>
+              </div>
               <div class="track-duration">
                 <span class="track-duration">2:48</span>
               </div>
@@ -740,12 +734,9 @@
               <div class="track-artist">OxT</div>
             </div>
             <div class="track-details">
-              <label class="liked-tracks">
-                <input type="checkbox" id="switch" hidden>
-                <div class="liked-tracks">
-                  <span class="fas fa-heart"></span>
-                </div>
-              </label>
+              <div class="liked-tracks">
+                <span class="fas fa-heart"></span>
+              </div>
               <div class="track-duration">
                 <span class="track-duration">3:56</span>
               </div>
@@ -761,12 +752,9 @@
               <div class="track-artist">OxT</div>
             </div>
             <div class="track-details">
-              <label class="liked-tracks">
-                <input type="checkbox" id="switch" hidden>
-                <div class="liked-tracks">
-                  <span class="fas fa-heart"></span>
-                </div>
-              </label>
+              <div class="liked-tracks">
+                <span class="fas fa-heart"></span>
+              </div>
               <div class="track-duration">
                 <span class="track-duration">3:43</span>
               </div>
@@ -782,12 +770,9 @@
               <div class="track-artist">Eve</div>
             </div>
             <div class="track-details">
-              <label class="liked-tracks">
-                <input type="checkbox" id="switch" hidden>
-                <div class="liked-tracks">
-                  <span class="fas fa-heart"></span>
-                </div>
-              </label>
+              <div class="liked-tracks">
+                <span class="fas fa-heart"></span>
+              </div>
               <div class="track-duration">
                 <span class="track-duration">3:41</span>
               </div>
@@ -804,12 +789,9 @@
               <div class="track-artist">TK from Ling tosite sigure</div>
             </div>
             <div class="track-details">
-              <label class="liked-tracks">
-                <input type="checkbox" id="switch" hidden>
-                <div class="liked-tracks">
-                  <span class="fas fa-heart"></span>
-                </div>
-              </label>
+              <div class="liked-tracks">
+                <span class="fas fa-heart"></span>
+              </div>
               <div class="track-duration">
                 <span class="track-duration">3:58</span>
               </div>
@@ -825,12 +807,9 @@
               <div class="track-artist">LiSA</div>
             </div>
             <div class="track-details">
-              <label class="liked-tracks">
-                <input type="checkbox" id="switch" hidden>
-                <div class="liked-tracks">
-                  <span class="fas fa-heart"></span>
-                </div>
-              </label>
+              <div class="liked-tracks">
+                <span class="fas fa-heart"></span>
+              </div>
               <div class="track-duration">
                 <span class="track-duration">3:57</span>
               </div>
@@ -846,12 +825,9 @@
               <div class="track-artist">Linked Horizon</div>
             </div>
             <div class="track-details">
-              <label class="liked-tracks">
-                <input type="checkbox" id="switch" hidden>
-                <div class="liked-tracks">
-                  <span class="fas fa-heart"></span>
-                </div>
-              </label>
+              <div class="liked-tracks">
+                <span class="fas fa-heart"></span>
+              </div>
               <div class="track-duration">
                 <span class="track-duration">1:34</span>
               </div>
@@ -867,12 +843,9 @@
               <div class="track-artist">VK Blanka</div>
             </div>
             <div class="track-details">
-              <label class="liked-tracks">
-                <input type="checkbox" id="switch" hidden>
-                <div class="liked-tracks">
-                  <span class="fas fa-heart"></span>
-                </div>
-              </label>
+              <div class="liked-tracks">
+                <span class="fas fa-heart"></span>
+              </div>
               <div class="track-duration">
                 <span class="track-duration">3:16</span>
               </div>
@@ -888,12 +861,9 @@
               <div class="track-artist">THE ORAL CIGARETTES</div>
             </div>
             <div class="track-details">
-              <label class="liked-tracks">
-                <input type="checkbox" id="switch" hidden>
-                <div class="liked-tracks">
-                  <span class="fas fa-heart"></span>
-                </div>
-              </label>
+              <div class="liked-tracks">
+                <span class="fas fa-heart"></span>
+              </div>
               <div class="track-duration">
                 <span class="track-duration">4:10</span>
               </div>
@@ -991,13 +961,14 @@
   <script src="js/login.js"></script>
   <script src="js/hero-parallax.js"></script>
   <script src="js/form-validation.js"></script>
+  <script src="js/liked-tracks.js"></script>
   <script>
-    // Cargar mi playlist en el index
+    // Load my playlist
     function loadMyPlaylistInIndex() {
       const container = document.getElementById('my-playlist-list');
       if (!container) return;
 
-      // Obtener datos de localStorage
+      // Get data from localStorage
       const playlist = JSON.parse(localStorage.getItem('my-anime-playlist') || '[]');
 
       if (playlist.length === 0) {
@@ -1005,10 +976,10 @@
         return;
       }
 
-      // Limitar a 5 canciones (opcional)
+      // Limited to 5 songs
       const visibleTracks = playlist.slice(0, 5);
 
-      // Generar HTML igual que en landing-tracks
+      // Generate HTML same way the landing-tracks
       container.innerHTML = visibleTracks.map((track, index) => `
       <div class="track-item">
         <span class="track-number">${index + 1}</span>
@@ -1024,7 +995,7 @@
     `).join('');
     }
 
-    // Ejecutar al cargar la página
+    // Execute when loading the web
     document.addEventListener('DOMContentLoaded', loadMyPlaylistInIndex);
   </script>
 

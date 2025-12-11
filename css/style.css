@@ -948,6 +948,7 @@ label {
   color: #ffffff;
   font-size: 22px;
   font-weight: 600;
+  /* align-items: center; */
 }
 
 .landing-artists-gallery {
@@ -994,6 +995,7 @@ label {
   justify-content: space-around;
   overflow: hidden;
   padding: 10px;
+  place-items: center;
 }
 
 .artist-box {
@@ -1012,7 +1014,7 @@ label {
 
 .artist-portrait-wrapper:hover {
   transform: scale(1.08, 1.08);
-  transition: all ease-in 5.0;
+  transition: all ease-in 0.2s;
 }
 
 .artist-portrait-index {
@@ -1128,7 +1130,7 @@ label {
   color: #2d3e69;
 }
 
-#switch:checked + .liked-tracks {
+.liked-tracks.activa {
   color: #2d3e69;
 }
 
